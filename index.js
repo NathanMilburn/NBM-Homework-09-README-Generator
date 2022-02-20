@@ -1,7 +1,7 @@
 // Nodejs modules used
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { totalmem } = require('os');
+// const { message } = require('statuses');
 
 // Inquirer prompts
 inquirer.prompt(
