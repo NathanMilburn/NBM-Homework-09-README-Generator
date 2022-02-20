@@ -1,0 +1,22 @@
+{
+  "name": "nbm-homework-09-readme-generator",
+  "version": "1.0.0",
+  "description": "An application that allows users to generate a README.md file based on prompt inputs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanMilburn/NBM-Homework-09-README-Generator.git"
+  },
+  "author": "NathanMilburn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanMilburn/NBM-Homework-09-README-Generator/issues"
+  },
+  "homepage": "https://github.com/NathanMilburn/NBM-Homework-09-README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
