@@ -4,8 +4,8 @@ const fs = require('fs');
 // const { message } = require('statuses');
 
 // Inquirer prompts
-inquirer.prompt(
-    [
+inquirer
+    .prompt([
         {
             type: 'input',
             message: 'What is your project title?',
@@ -55,5 +55,11 @@ inquirer.prompt(
             name: 'deployedLinks',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         }
-    ]
-)
+])
+.then((answers) => {
+    const generateREADMEPage = generateHTML(answers)
+
+    fs.writeFile('README.md', generateREADMEPage, (err) => 
+    err ? console.log(err) : console.log('Profile Page Created!')
+    );
+  });
