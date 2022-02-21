@@ -15,8 +15,20 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What is your user story?',
+            message: 'What is your user story? This follows an "AS A, I WANT, SO THAT" formatting, this question is for the AS A section',
             name: 'userStory',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'What is your user story? This follows an "AS A, I WANT, SO THAT" formatting, this question is for the I WANT section',
+            name: 'userStory2',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'What is your user story? This follows an "AS A, I WANT, SO THAT" formatting, this question is for the SO THAT section',
+            name: 'userStory3',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         },
         {
@@ -54,37 +66,82 @@ inquirer
             message: 'What are the links to your deployed repository and application?',
             name: 'deployedLinks',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
-        }
+        },
+        {
+            type: 'input',
+            message: 'What is your GitHub username?',
+            name: 'github',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'Please link your LinkedIn account.',
+            name: 'linkedin',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'Please enter your email address.',
+            name: 'email',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
     ])
     .then(({
         title,
         userStory,
+        userStory2,
+        userStory3,
         process,
         useCases,
         howTo,
         futureDevelopments,
         challenges,
-        deployedLinks
+        deployedLinks,
+        github,
+        linkedin,
+        email
     }) => {
     const template = `# ${title}
-    ${userStory}
-    ${process}
-    ${useCases}
-    ${howTo}
-    ${futureDevelopments}
-    ${challenges}
-    ${deployedLinks}`;
-    createNewReadMe(title, template);
+    
+## USER STORY
+AS A ${userStory}
+I WANT ${userStory2}
+SO THAT ${userStory3}
+
+## PROCESS
+${process}
+    
+## USE CASES
+${useCases}
+    
+## HOW TO USE APPLICATION
+${howTo}
+    
+## FUTURE DEVELOPMENTS
+${futureDevelopments}
+    
+## CHALLENGES FACED
+${challenges}
+    
+## LINKS TO DEPLOYED APPLICATION
+${deployedLinks}
+
+# CONTACT INFO
+* GitHub: ${github}
+* LinkedIn: ${linkedin}
+* E-Mail: ${email}`;
+
+createNewReadMe(title, template);
+}
+);
+function createNewReadMe(fileName, data){
+fs.writeFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, data, (err) => {
+    if(err){
+        console.log(err)
     }
-    );
-    function createNewReadMe(fileName, data){
-    fs.writeFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, data, (err) => {
-        if(err){
-            console.log(err)
-        }
-        console.log('README.md File Created!');
-    })
-    }
+    console.log('README.md File Created!');
+})
+}
 
     // Previously developed code based on index.html generator from previous class mini project.
     // .then((answers) => {
