@@ -27,18 +27,6 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What are your future development plans?',
-            name: 'futureDevelopments',
-            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
-        },
-        {
-            type: 'input',
-            message: 'What were your biggest challenges for this project?',
-            name: 'challenges',
-            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
-        },
-        {
-            type: 'input',
             message: 'What are the use cases for your app?',
             name: 'useCases',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
@@ -51,15 +39,58 @@ inquirer
         },
         {
             type: 'input',
+            message: 'What are your future development plans?',
+            name: 'futureDevelopments',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'What were your biggest challenges for this project?',
+            name: 'challenges',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
             message: 'What are the links to your deployed repository and application?',
             name: 'deployedLinks',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         }
-])
-.then((answers) => {
-    const generateREADMEPage = generateHTML(answers)
-
-    fs.writeFile('README.md', generateREADMEPage, (err) => 
-    err ? console.log(err) : console.log('Profile Page Created!')
+    ])
+    .then(({
+        title,
+        userStory,
+        process,
+        useCases,
+        howTo,
+        futureDevelopments,
+        challenges,
+        deployedLinks
+    }) => {
+    const template = `# ${title}
+    ${userStory}
+    ${process}
+    ${useCases}
+    ${howTo}
+    ${futureDevelopments}
+    ${challenges}
+    ${deployedLinks}`;
+    createNewReadMe(title, template);
+    }
     );
-  });
+    function createNewReadMe(fileName, data){
+    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
+        if(err){
+            console.log(err)
+        }
+        console.log('README.md File Created!');
+    })
+    }
+
+    // Previously developed code based on index.html generator from previous class mini project.
+    // .then((answers) => {
+    //     const generateREADMEPage = generateHTML(answers)
+
+    //     fs.writeFile('README.md', generateREADMEPage, (err) => 
+    //     err ? console.log(err) : console.log('README.md File Created!')
+    //     );
+    // });

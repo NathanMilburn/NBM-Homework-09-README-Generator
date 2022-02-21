@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/NathanMilburn/NBM-Homework-09-README-Generator#readme",
   "dependencies": {
+    "chalk": "^5.0.0",
     "inquirer": "^8.2.0"
   }
 }
