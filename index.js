@@ -97,7 +97,7 @@ inquirer
       type: "list",
       message: "What is the license used for this project?",
       name: "license",
-      choices: ["MIT", "ISC", "Artistic-2.0", "Unlicense", "N/A"],
+      choices: ["MIT", "ISC"],
       validate: (value) => {
         if (value) {
           return true;
