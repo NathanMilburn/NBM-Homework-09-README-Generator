@@ -1,4 +1,4 @@
-# README
+# sdas
 ## TABLE OF CONTENTS
 - [Title](#title)
 - [UserStory](#userStory)
@@ -8,30 +8,30 @@
 - [License](#license)
 
 ## USER STORY
-AS A Web developer
-I WANT to create a module package that generates README files based on user submitted information
-SO THAT I can easily create README files for future projects.
+AS A a
+I WANT a
+SO THAT a
 
 ## DESCRIPTION
-This is a module package that features both the inquirer and chalk package to accept user submitted information to generate a well formatted README file.
+a
 
 ## PROCESS
-Create the npm init package before downloading necessary dependencies. The next step was to create an inquirer prompt to accept user input that would fill out relevant project information. Lastly, I needed to create a function that creates the md file based on previously submitted information.
+a
     
 ## USE CASES
-Saving time on project development by structuring the README file with just user supplied information on their application.
+a
     
 ## HOW TO USE APPLICATION
-Open the console terminal, create a title for your project/readme, then follow along with the questionaire to input relevant data for the project's README file.
+a
     
 ## FUTURE DEVELOPMENTS
-Make the formatting of the finalized readme file to look more appealing for future projects. Also to find ways that chalk can be implemented more to stylize the input prompts.
+a
     
 ## CHALLENGES FACED
-Having to test through the module over and over to make sure final structuring is as originally envisioned.
+a
     
 ## LINKS TO DEPLOYED APPLICATION
-https://github.com/NathanMilburn/NBM-Homework-09-README-Generator
+a
 
 ## LICENSE
 MIT License
@@ -57,6 +57,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## CONTACT INFO
-* GitHub: NathanMilburn
-* LinkedIn: https://www.linkedin.com/in/nathan-milburn-55487513a/
-* E-Mail: nathan.milburn@outlook.com
+* GitHub: a
+* LinkedIn: a
+* E-Mail: a

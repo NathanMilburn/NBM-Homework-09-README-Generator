@@ -1,7 +1,6 @@
 // Nodejs modules used
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const { message } = require('statuses');
 
 // Inquirer prompts
 inquirer
@@ -15,20 +14,26 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What is your user story? This follows an "AS A, I WANT, SO THAT" formatting, this question is for the AS A section',
+            message: 'What is your user story? This follows traditional "AS A, I WANT, SO THAT" formatting. AS A: ',
             name: 'userStory',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         },
         {
             type: 'input',
-            message: 'What is your user story? This follows an "AS A, I WANT, SO THAT" formatting, this question is for the I WANT section',
+            message: 'What is your user story? This follows traditional "AS A, I WANT, SO THAT" formatting. I WANT: ',
             name: 'userStory2',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         },
         {
             type: 'input',
-            message: 'What is your user story? This follows an "AS A, I WANT, SO THAT" formatting, this question is for the SO THAT section',
+            message: 'What is your user story? This follows traditional "AS A, I WANT, SO THAT" formatting. SO THAT: ',
             name: 'userStory3',
+            validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'What is the description for this project?',
+            name: 'description',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         },
         {
@@ -40,7 +45,7 @@ inquirer
         {
             type: 'input',
             message: 'What are the use cases for your app?',
-            name: 'useCases',
+            name: 'usage',
             validate: (value)=>{if(value){return true} else{return 'A value is needed to continue'}}
         },
         {
@@ -91,8 +96,9 @@ inquirer
         userStory,
         userStory2,
         userStory3,
+        description,
         process,
-        useCases,
+        usage,
         howTo,
         futureDevelopments,
         challenges,
@@ -102,17 +108,26 @@ inquirer
         email
     }) => {
     const template = `# ${title}
-    
+## TABLE OF CONTENTS
+- [UserStory](#userStory)
+- [PROCESS](#process)
+- [Usage](#usage)
+- [ContactInfo](#github)
+- [License](#license)
+
 ## USER STORY
 AS A ${userStory}
 I WANT ${userStory2}
 SO THAT ${userStory3}
 
+## DESCRIPTION
+${description}
+
 ## PROCESS
 ${process}
     
 ## USE CASES
-${useCases}
+${usage}
     
 ## HOW TO USE APPLICATION
 ${howTo}
@@ -126,7 +141,30 @@ ${challenges}
 ## LINKS TO DEPLOYED APPLICATION
 ${deployedLinks}
 
-# CONTACT INFO
+## LICENSE
+MIT License
+
+Copyright (c) [2022] [Nathan Milburn]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## CONTACT INFO
 * GitHub: ${github}
 * LinkedIn: ${linkedin}
 * E-Mail: ${email}`;

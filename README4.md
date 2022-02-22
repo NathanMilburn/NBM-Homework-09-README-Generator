@@ -1,8 +1,8 @@
-# README
+# README4
 ## TABLE OF CONTENTS
 - [Title](#title)
 - [UserStory](#userStory)
-- [PROCESS](#process)
+- [Installation](#process)
 - [Usage](#usage)
 - [ContactInfo](#github)
 - [License](#license)
