@@ -192,6 +192,7 @@ inquirer
       },
     },
   ])
+//   formatting order for the questionaire
   .then(
     ({
       title,
