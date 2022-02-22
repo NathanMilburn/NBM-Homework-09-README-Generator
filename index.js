@@ -131,9 +131,8 @@ inquirer
     },
     {
       type: "input",
-      message:
-        "What are the links to your deployed repository and application?",
-      name: "deployedLinks",
+      message: "What are the resources/contributions you used for this project?",
+      name: "contributing",
       validate: (value) => {
         if (value) {
           return true;
@@ -156,7 +155,7 @@ inquirer
     },
     {
       type: "input",
-      message: "Please link your LinkedIn account.",
+      message: "Please link your LinkedIn account:",
       name: "linkedin",
       validate: (value) => {
         if (value) {
@@ -168,7 +167,7 @@ inquirer
     },
     {
       type: "input",
-      message: "Please enter your email address.",
+      message: "Please enter your email address:",
       name: "email",
       validate: (value) => {
         if (value) {
@@ -191,46 +190,38 @@ inquirer
       howTo,
       futureDevelopments,
       challenges,
-      deployedLinks,
+      contributing,
       github,
       linkedin,
       email,
     }) => {
       const template = `# ${title}
+## USER STORY
+AS A ${userStory}
+
+I WANT ${userStory2}
+
+SO THAT ${userStory3}
+
 ## DESCRIPTION
 ${description}
 
 ## TABLE OF CONTENTS
-- [USERSTORY](#userStory)
 - [INSTALLATION](#installation)
 - [USAGE](#usage)
 - [LICENSE](#license)
-- [CONTACT](#contact)
+- [CONTRIBUTING](#contributing)
+- [QUESTIONS](#questions)
 
-## USER STORY
-AS A ${userStory}
-I WANT ${userStory2}
-SO THAT ${userStory3}
 
 
 ## INSTALLATION
 ${installation}
     
-## USE CASES
+## USAGE
 ${usage}
-    
-## HOW TO USE APPLICATION
 ${howTo}
     
-## FUTURE DEVELOPMENTS
-${futureDevelopments}
-    
-## CHALLENGES FACED
-${challenges}
-    
-## LINKS TO DEPLOYED APPLICATION
-${deployedLinks}
-
 ## LICENSE
 MIT License
 
@@ -254,8 +245,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## CONTACT
-* GitHub: ${github}
+## CONTRIBUTING
+${contributing}
+
+## CHALLENGES FACED
+${challenges}
+
+## FUTURE DEVELOPMENTS
+${futureDevelopments}
+
+## QUESTIONS
+If you have any further questions about this module or improvement ideas, please feel free to connect on either GitHub or LinkedIn, or email me at:
+* GitHub: https://github.com/${github}
 * LinkedIn: ${linkedin}
 * E-Mail: ${email}`;
 
