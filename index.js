@@ -94,9 +94,10 @@ inquirer
       },
     },
     {
-      type: "input",
-      message: "How do you use your application?",
-      name: "howTo",
+      type: "list",
+      message: "What is the license used for this project?",
+      name: "license",
+      choices: ["MIT", "ISC", "Artistic-2.0", "Unlicense", "N/A"],
       validate: (value) => {
         if (value) {
           return true;
@@ -107,8 +108,21 @@ inquirer
     },
     {
       type: "input",
-      message: "What are your future development plans?",
-      name: "futureDevelopments",
+      message:
+        "What are the resources/contributions you used for this project?",
+      name: "contributing",
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          return "A value is needed to continue";
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "How do you use your application?",
+      name: "howTo",
       validate: (value) => {
         if (value) {
           return true;
@@ -131,8 +145,8 @@ inquirer
     },
     {
       type: "input",
-      message: "What are the resources/contributions you used for this project?",
-      name: "contributing",
+      message: "What are your future development plans?",
+      name: "futureDevelopments",
       validate: (value) => {
         if (value) {
           return true;
@@ -188,9 +202,10 @@ inquirer
       installation,
       usage,
       howTo,
-      futureDevelopments,
-      challenges,
+      license,
       contributing,
+      challenges,
+      futureDevelopments,
       github,
       linkedin,
       email,
@@ -223,27 +238,9 @@ ${usage}
 ${howTo}
     
 ## LICENSE
-MIT License
+[![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})
 
-Copyright (c) [2022] [Nathan Milburn]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The license included for the project is under ${license}
 
 ## CONTRIBUTING
 ${contributing}
