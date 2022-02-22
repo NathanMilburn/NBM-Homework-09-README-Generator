@@ -274,12 +274,3 @@ function createNewReadMe(fileName, data) {
     }
   );
 }
-
-// Previously developed code based on index.html generator from previous class mini project.
-// .then((answers) => {
-//     const generateREADMEPage = generateHTML(answers)
-
-//     fs.writeFile('README.md', generateREADMEPage, (err) =>
-//     err ? console.log(err) : console.log('README.md File Created!')
-//     );
-// });
