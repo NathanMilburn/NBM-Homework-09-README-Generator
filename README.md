@@ -12,6 +12,9 @@ This is a module that features both the inquirer and chalk packages to accept us
 ## APPLICATION IN USE
 ![RecordingOfReadMeGenerator](./media/README-Generator-GIF.gif "Recording of Application in use")
 
+YouTube Link to application video in case gif recording is too small:
+![ReadMeGeneratorYouTubeLink](https://www.youtube.com/watch?v=H2cTEoMJJLo "YouTube video of my deployed module package in case gif is too small to read")
+
 ## TABLE OF CONTENTS
 - [INSTALLATION](#installation)
 - [USAGE](#usage)
