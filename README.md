@@ -7,7 +7,7 @@ I WANT to create a module package that generates README files based on user subm
 SO THAT I can easily create README files for future projects.
 
 ## DESCRIPTION
-This is a module package that features both the inquirer and chalk package to accept user submitted information to generate a well formatted README file.
+This is a module that features both the inquirer and chalk package to accept user submitted information to generate a well formatted README file.
 
 ## TABLE OF CONTENTS
 - [INSTALLATION](#installation)
@@ -19,10 +19,10 @@ This is a module package that features both the inquirer and chalk package to ac
 
 
 ## INSTALLATION
-Create the npm init package before downloading necessary dependencies. The next step was to create an inquirer prompt to accept user input that would fill out relevant project information. Lastly, I needed to create a function that creates the md file based on previously submitted information.
+Create an npm init package before downloading necessary dependencies. The next step was to create an inquirer prompt to accept user input that would fill out the relevant project information. Lastly, I needed to create a function that creates the md file based on previously submitted information.
     
 ## USAGE
-Saving time on project development by structuring the README file with just user supplied information on their application.
+Saving time on project development by structuring the README file with just user supplied information on their application. Open the console terminal, create a title for your project/readme, then follow along with the questionaire to input relevant data for the project's README file.
 Open the console terminal, create a title for your project/readme, then follow along with the questionaire to input relevant data for the project's README file.
     
 ## LICENSE
@@ -31,13 +31,13 @@ Open the console terminal, create a title for your project/readme, then follow a
 The license included for the project is under ISC
 
 ## CONTRIBUTING
-https://www.youtube.com/watch?v=2VUQABoFOqw (Javier Perez-YouTube, GitHub username: japb98) https://uwa.bootcampcontent.com/UWA-Bootcamp/uw-blv-virt-fsf-pt-12-2021-u-c/-/tree/master/09-NodeJS/01-Activities/28-Stu_Mini-project (Used for reference with input formatting).
+https://uwa.bootcampcontent.com/UWA-Bootcamp/uw-blv-virt-fsf-pt-12-2021-u-c/-/tree/master/09-NodeJS/01-Activities/28-Stu_Mini-project (Used for reference with input formatting) https://nodejs.org/api/fs.html (Used for reference on fs write file function structuring).
 
 ## CHALLENGES FACED
 Having to test through the module over and over to make sure final structuring is as originally envisioned.
 
 ## FUTURE DEVELOPMENTS
-Make the formatting of the finalized readme file to look more appealing for future projects. Also to find ways that chalk can be implemented more to stylize the input prompts.
+Make the formatting of the finalized readme file to look more appealing for future projects. As well as finding ways to incorporate the chalk module to further stylize the console logs/inputs.
 
 ## QUESTIONS
 If you have any further questions about this module or improvement ideas, please feel free to connect on either GitHub or LinkedIn, or email me at:
