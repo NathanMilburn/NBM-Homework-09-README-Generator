@@ -1,4 +1,4 @@
-# README
+# readme
 ## USER STORY
 AS A Web developer
 
@@ -8,9 +8,6 @@ SO THAT I can easily create README files for future projects.
 
 ## DESCRIPTION
 This is a module that features both the inquirer and chalk packages to accept user submitted information to generate a professionally formatted README file.
-
-## APPLICATION IN USE
-![ReadMeGeneratorRecording](./media/README-Generator-Video.mp4 "Recorded video of my module in use")
 
 ## TABLE OF CONTENTS
 - [INSTALLATION](#installation)
@@ -25,7 +22,7 @@ This is a module that features both the inquirer and chalk packages to accept us
 Create an npm init package before downloading necessary dependencies. The next step was to create an inquirer prompt to accept user input that would fill out the relevant project information. Lastly, I needed to create a function that creates the md file based on previously submitted information.
     
 ## USAGE
-Saving time on project development by structuring the README file with just user supplied information on their application. 
+Saving time on project development by structuring the README file with just user supplied information on their application.
 Open the console terminal, type node index.js, then create a title for your project/README, then follow along with the questionaire to input relevant data for the project's README file.
     
 ## LICENSE
@@ -45,5 +42,5 @@ Make the formatting of the finalized README file to look more appealing for futu
 ## QUESTIONS
 If you have any further questions about this module or improvement ideas, please feel free to connect on either GitHub or LinkedIn, or email me at:
 * GitHub: https://github.com/NathanMilburn
-* LinkedIn: https://www.linkedin.com/in/nathan-milburn-55487513a/
+* LinkedIn: ttps://www.linkedin.com/in/nathan-milburn-55487513a/
 * E-Mail: nathan.milburn@outlook.com
