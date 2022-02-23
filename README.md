@@ -48,5 +48,5 @@ Make the formatting of the finalized README file to look more appealing for futu
 ## QUESTIONS
 If you have any further questions about this module or improvement ideas, please feel free to connect on either GitHub or LinkedIn, or email me at:
 * GitHub: https://github.com/NathanMilburn
-* LinkedIn: ttps://www.linkedin.com/in/nathan-milburn-55487513a/
+* LinkedIn: https://www.linkedin.com/in/nathan-milburn-55487513a/
 * E-Mail: nathan.milburn@outlook.com
