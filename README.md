@@ -9,6 +9,9 @@ SO THAT I can easily create README files for future projects.
 ## DESCRIPTION
 This is a module that features both the inquirer and chalk packages to accept user submitted information to generate a professionally formatted README file.
 
+## APPLICATION IN USE
+![RecordingOfReadMeGenerator](./media/README-Generator-Video-2.mp4 "Recording of Application in use")
+
 ## TABLE OF CONTENTS
 - [INSTALLATION](#installation)
 - [USAGE](#usage)
