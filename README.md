@@ -26,15 +26,23 @@ YouTube Link to application video in case gif recording is too small:
 
 ## INSTALLATION
 Create an npm init package before downloading necessary dependencies. The next step was to create an inquirer prompt to accept user input that would fill out the relevant project information. Lastly, I needed to create a function that creates the md file based on previously submitted information.
+
+![WriteFileFunction](./media/File-Naming-Code.PNG "Writefile/naming Function")
     
 ## USAGE
 Saving time on project development by structuring the README file with just user supplied information on their application.
+
 Open the console terminal, type node index.js, then create a title for your project/README, then follow along with the questionaire to input relevant data for the project's README file.
+
+![InquirerQuestionairePrompt](./media/Inquirer-Prompt-Example-Question.PNG "First Question in Inquirer Prompt")
+
     
 ## LICENSE
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 The license included for the project is under ISC
+
+![LiscencingQuestionairePrompt](./media/Inquirer-Liscencing-Prompt.PNG "Liscencing Question Prompt")
 
 ## CONTRIBUTING
 https://uwa.bootcampcontent.com/UWA-Bootcamp/uw-blv-virt-fsf-pt-12-2021-u-c/-/tree/master/09-NodeJS/01-Activities/28-Stu_Mini-project (Used for reference with input prompt formatting) https://nodejs.org/api/fs.html (Used for reference on fs writefile function structuring).

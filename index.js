@@ -261,6 +261,7 @@ If you have any further questions about this module or improvement ideas, please
       createNewReadMe(title, template);
     }
   );
+// Function to write file and title it based on question #1
 function createNewReadMe(fileName, data) {
   fs.writeFile(
     `./${fileName.toUpperCase().split(" ").join("")}.md`,
